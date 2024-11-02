@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    margin: auto;
+    
+}
