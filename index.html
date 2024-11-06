@@ -11,14 +11,11 @@
 <body>
   <section id="container">
     <section class="flex-container">
-      <h1>Password Generator</h1>
+      <h1 id="title">Password Generator</h1>
       <section id="passworddisplay"></section>
-
       <section id="slider-container">
-        <p>Character Length</p>
-        <input type="range" min="8" max="20" name="character_length" id="character_length">
-      </section>
-      <section id="character-container">
+        <p id="character_title">Character Length</p>
+        <input type="range" min="8" max="20" name="character_length" id="character_length"><br>
         <input type="checkbox" name="uppercase" id="uppercase">
         <label for="uppercase">Include Uppercase Letters</label><br>  
         <input type="checkbox" name="lowercase" id="lowercase">
@@ -29,15 +26,18 @@
         <label for="symbols">Include Symbols</label><br>
       </section>
 
-    <section id="strngth-container">
+    <section id="strength-container">
       <p>Strength</p>
+      <div class="strength-meter"></div>
+      <div class="strength-meter"></div>
+      <div class="strength-meter"></div>
+      <div class="strength-meter"></div>
+      <div class="strength-meter"></div>
     </section>
 
     <section class="generatecontainer">
-      <button>Generate</button>
-    </section>  
-  </section>
-      
+      <button id="generate_button">Generate</button>
+    </section> 
   </section>
   
   
