@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+    font-family: "JetBrains Mono-Italic";
+    src: url("assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
+}
+
 body {
     background-color: #18171F;
     color: aliceblue;
+    font-family: "JetBrains Mono";
 }
 
 #container {
@@ -108,6 +116,8 @@ input[type="range"]::-moz-range-track {
     
 }
 
+
+
 #character_length {
     padding-bottom: 1.5em;
 }
@@ -117,10 +127,12 @@ input[type="range"]::-moz-range-track {
 }
 
 #generate_button {
+    
     width: 100%;
     background-color: #a4ffaf;
     color: #24232C;
     padding: 1em;
+    
 }
 #strength-container {
     display: flex;
@@ -130,32 +142,35 @@ input[type="range"]::-moz-range-track {
 
 /*Strength Meter Levels*/
 
+.strength_tooweak, .strength_weak, .strength_medium, .strength_strong {
+    display: none;
+}
 
 .strength-meter-tooweak {
     height: 1.25em;
     width: 0.5em;
     border: 1px solid white;
     background-color: #f64a4a;
-    
+    display: none;
 }
 .strength-meter-weak {
     height: 1.25em;
     width: 0.5em;
     border: 1px solid white;
     background-color: #fb7658;
-    
+    display: none;
 }
 .strength-meter-medium {
     height: 1.25em;
     width: 0.5em;
     border: 1px solid white;
     background-color: #f8cd65;
-    
+    display: none;
 }
 .strength-meter-strong {
     height: 1.25em;
     width: 0.5em;
     border: 1px solid white;
     background-color: #a4ffaf;
-    
+    display: none;
 }
