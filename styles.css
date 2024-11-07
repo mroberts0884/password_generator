@@ -128,8 +128,34 @@ input[type="range"]::-moz-range-track {
     gap: 0.5em;
 }
 
-.strength-meter {
+/*Strength Meter Levels*/
+
+
+.strength-meter-tooweak {
     height: 1.25em;
     width: 0.5em;
     border: 1px solid white;
+    background-color: #f64a4a;
+    
+}
+.strength-meter-weak {
+    height: 1.25em;
+    width: 0.5em;
+    border: 1px solid white;
+    background-color: #fb7658;
+    
+}
+.strength-meter-medium {
+    height: 1.25em;
+    width: 0.5em;
+    border: 1px solid white;
+    background-color: #f8cd65;
+    
+}
+.strength-meter-strong {
+    height: 1.25em;
+    width: 0.5em;
+    border: 1px solid white;
+    background-color: #a4ffaf;
+    
 }
