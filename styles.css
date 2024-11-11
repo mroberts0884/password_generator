@@ -104,6 +104,31 @@ input[type="range"]::-moz-range-track {
     
 }
 
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+input[type="checkbox"]:checked {
+    background-color: #a4ffaf;
+    border: 1px solid #a4ffaf;
+    background-image: url(assets/images/icon-check.svg);
+    align-items: center;
+}
+
+#character_number {
+    text-align: right;
+    padding-bottom: 1em;
+}      
+   
 #passworddisplay, #slider-container {
     background-color: #24232C;
     color: #E6E5EA;
