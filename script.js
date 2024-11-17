@@ -30,9 +30,7 @@ function getRandomString(length) {
     if (numbers.checked) {
         characterPool += number_char
         }
-    if (numbers.checked) {
-        characterPool += number_char
-        }
+    
     if (symbols.checked) {
         characterPool += symbol_char
         }
@@ -41,7 +39,32 @@ function getRandomString(length) {
         result.push(uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length)))
         result.push(lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length)))
         
-    }    
+    }
+    if (uppercase.checked && numbers.checked) {
+        characterPool += uppercaseLetters + number_char
+        result.push(uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length)))
+        result.push(number_char.charAt(Math.floor(Math.random() * number_char.length)))
+    }
+    if (uppercase.checked && symbol_char.checked) {
+        characterPool += uppercaseLetters + symbol_char
+        result.push(uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length)))
+        result.push(symbol_char.charAt(Math.floor(Math.random() * symbol_char.length)))
+    }
+    if (lowercase.checked && numbers.checked) {
+        characterPool += lowercaseLetters + number_char
+        result.push(number_char.charAt(Math.floor(Math.random() * number_char.length)))
+        result.push(lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length)))
+    }
+    if (symbols.checked && lowercase.checked) {
+        characterPool += symbol_char + lowercaseLetters
+        result.push(symbol_char.charAt(Math.floor(Math.random() * symbol_char.length)))
+        result.push(lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length)))
+    }
+    if (numbers.checked && symbols.checked) {
+        characterPool += symbol_char + number_char
+        result.push(number_char.charAt(Math.floor(Math.random() * number_char.length)))
+        result.push(symbol_char.charAt(Math.floor(Math.random() * symbol_char.length)))
+    }
     if (characterPool === '') {
         passwordDisplay.textContent = 'Please select at least one character type.';
         return;
@@ -60,11 +83,4 @@ generate_btn.addEventListener('click', function() {
     const length = parseInt(character_length.value);
     const password = getRandomString(length)
     passwordDisplay.innerText = password
-
-})
-    
-        
-        
-    
-
-
+    })
