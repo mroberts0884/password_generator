@@ -65,6 +65,8 @@ function getRandomString(length) {
         result.push(number_char.charAt(Math.floor(Math.random() * number_char.length)))
         result.push(symbol_char.charAt(Math.floor(Math.random() * symbol_char.length)))
     }
+
+    
     if (characterPool === '') {
         passwordDisplay.textContent = 'Please select at least one character type.';
         return;
