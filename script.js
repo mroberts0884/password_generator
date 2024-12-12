@@ -8,11 +8,11 @@ const passwordDisplay = document.getElementById('passworddisplay')
 character_length.oninput = function() {
     character_number.textContent = this.value;
 }
-
+//Random Characters
 function characterRandom(str,result) {
     result.push(str.charAt(Math.floor(Math.random() * str.length)))
 }
-
+//style for the strength meter
 function strengthStyle(container, strength_text, strength_meter) {
     container.style.display = 'flex'
     container.style.flexDirection = 'row'
@@ -21,7 +21,7 @@ function strengthStyle(container, strength_text, strength_meter) {
     strength_meter.style.display = 'flex'
     return
 }
-
+//When the strength meter shouldn't be shown
 function doNotShow(container, strength_text, strength_meter) {
     container.style.display = 'none'
     strength_text.style.display = 'none'
@@ -72,16 +72,27 @@ function getRandomString(length) {
     
     if (selectedOptions.length === 1) {
         strengthStyle(too_weak, strength_tooweak, strength_meter_tooweak)
-        
+        doNotShow(weak, strength_weak, strength_meter_weak)
+        doNotShow(medium, strength_medium, strength_meter_medium)
+        doNotShow(strong, strength_strong, strength_meter_strong)
     } 
-    if (selectedOptions.length === 2) {
+    else if (selectedOptions.length === 2) {
         strengthStyle(weak, strength_weak, strength_meter_weak)
+        doNotShow(strong, strength_strong, strength_meter_strong)
+        doNotShow(too_weak, strength_tooweak, strength_meter_tooweak)
+        doNotShow(medium, strength_medium, strength_meter_medium)
     }
-    if (selectedOptions.length === 3) {
+    else if (selectedOptions.length === 3) {
         strengthStyle(medium, strength_medium, strength_meter_medium)
+        doNotShow(strong, strength_strong, strength_meter_strong)
+        doNotShow(weak, strength_weak, strength_meter_weak)
+        doNotShow(too_weak, strength_tooweak, strength_meter_tooweak)
     }
     else if (selectedOptions.length === 4) {
         strengthStyle(strong, strength_strong, strength_meter_strong)
+        doNotShow(too_weak, strength_tooweak, strength_meter_tooweak)
+        doNotShow(weak, strength_weak, strength_meter_weak)
+        doNotShow(medium, strength_medium, strength_meter_medium)
     }
     
     
